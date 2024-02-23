@@ -45,7 +45,7 @@
 // Dữ liệu khóa học lưu động trong mảng
 $courses = [
     [
-        'img' => 'img/hocbong.jpg',
+        'img' => 'img/course_devInternational.jpg',
         'title' => 'Lập trình viên quốc tế',
         'description' => 'Chương trình đào tạo chính thức tại Việt Nam từ
 Aptech Global. Phát triển nghề nghiệp sinh viên IT như một lập trình viên
@@ -55,7 +55,7 @@ quốc tế.',
         'duration' => '2 - 2.5 năm'
     ],
     [
-        'img' => 'img/course-web-fullstack.png',
+        'img' => 'img/course_webFullstack.png',
         'title' => 'Lập trình WEB FULLSTACK',
         'description' => 'Khóa học phù hợp với người bắt đầu lập trình hoặc 
         người chuyển nghề.Trang bị từ fronted đến backend, xây dựng website 
@@ -65,7 +65,7 @@ quốc tế.',
         'duration' => '6 tháng'
     ],
     [
-        'img' => 'img/course-java-fullstack.png',
+        'img' => 'img/course_javaFullstack.png',
         'title' => 'Lập trình JAVA FULLSTACK',
         'description' => 'Phát triển ứng dụng web từ cơ bản đến nâng cao bằng
          Java, các ứng dụng doanh nghiệp sử dụng J2EE, Servlet, JSP, Spring Framework, EJB,...',
@@ -74,7 +74,7 @@ quốc tế.',
         'duration' => '236 giờ'
     ],
     [
-        'img' => 'img/course-php-laravel.png',
+        'img' => 'img/course_phpLaravel.png',
         'title' => 'Lập trình PHP & LARAVEL',
         'description' => 'PHP là một trong các ngôn ngữ thiết kế web mạnh nhất.
         Khóa học trang bị kĩ năng xây dựng web hoàn chỉnh sử dụng PHP kết hợp 
@@ -84,7 +84,7 @@ quốc tế.',
         'duration' => '36 giờ'
     ],
     [
-        'img' => 'img/course-.net.png',
+        'img' => 'img/course_dotNet.png',
         'title' => 'Khóa học Lập trình .NET',
         'description' => 'Phát triển ứng dụng web sử dụng nền tảng ASP.NET Core
          MVC. Để học tốt khóa học yêu cầu học viên đã có kiến thức về C# và Frontend',
@@ -93,7 +93,7 @@ quốc tế.',
         'duration' => '40 giờ'
     ],
     [
-        'img' => 'img/course-sql.png',
+        'img' => 'img/course_sqlServer.png',
         'title' => 'Lập trình SQL SERVER',
         'description' => 'Trang bị những kiến thức nền tảng vững chắc về SQL Server 
         như các kỹ thuật: lọc dữ liệu, phân tích, thiết kế và quản trị cơ sở dữ liệu,...',

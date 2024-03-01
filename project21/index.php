@@ -78,7 +78,7 @@ $currentPageItems = array_slice($products, ($currentPage - 1) * $itemsPerPage, $
 <body>
     <div class="product_list " style="display: flex">
         <?php foreach ($currentPageItems as $product) : ?>
-            <div class="product">
+            <div class="product" style="margin-right: 20px">
                 <div class="card" style="width: 18rem;">
                     <img src="<?php echo $product['img'] ?>" class="card-img-top" alt="..." style="width: 18rem;">
                     <div class="card-body">

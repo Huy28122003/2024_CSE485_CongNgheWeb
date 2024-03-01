@@ -1,10 +1,10 @@
 <?php
 $users = [
     [
-        "username" => "johndoe",
-        "password" => password_hash("password123", PASSWORD_DEFAULT),
-        "name" => "John Doe",
-        "email" => "johndoe@example.com"
+        "username" => "lam",
+        "password" => password_hash("123", PASSWORD_DEFAULT),
+        "name" => "Lam Nguyen",
+        "email" => "lamhubo2003@example.com"
  ],
 ];
 ?>

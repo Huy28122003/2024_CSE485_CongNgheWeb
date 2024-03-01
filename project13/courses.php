@@ -45,7 +45,7 @@
 // Dữ liệu khóa học lưu động trong mảng
 $courses = [
     [
-        'img' => 'img/hocbong.jpg',
+        'img' => 'img/course-scholarships.jpg',
         'title' => 'Lập trình viên quốc tế',
         'description' => 'Chương trình đào tạo chính thức tại Việt Nam từ
 Aptech Global. Phát triển nghề nghiệp sinh viên IT như một lập trình viên

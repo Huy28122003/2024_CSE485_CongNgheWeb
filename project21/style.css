@@ -1,0 +1,30 @@
+img{
+    width: 100%;
+}
+
+.products{
+    text-align: center;
+}
+a{
+    color: black;
+    text-decoration: none;
+    margin-right: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+a:hover{
+    color: orangered;
+    border-bottom: 2px solid orangered;
+}
+span:hover{
+    color: orangered;
+    border-bottom: 2px solid orangered;
+}
+span{
+    margin-right: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+.pagination{
+    margin: 10px;
+}

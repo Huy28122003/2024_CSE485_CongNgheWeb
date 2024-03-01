@@ -1,0 +1,15 @@
+input{
+    margin: 20px;
+}
+.round-image{
+    border-radius: 50%;
+    height: 150px;
+    margin-top: 20px;
+}
+.container{
+    margin-left: 400px;
+    margin-top: 20px;
+}
+.row{
+    margin-top: 40px;
+}

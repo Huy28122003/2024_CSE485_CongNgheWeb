@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,20 +14,20 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
 
     <!-- Bootstrap -->
-    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/project33/public/assets/css/bootstrap.min.css"/>
 
     <!-- Slick -->
-    <link type="text/css" rel="stylesheet" href="assets/css/slick.css"/>
-    <link type="text/css" rel="stylesheet" href="assets/css/slick-theme.css"/>
+    <link type="text/css" rel="stylesheet" href="/project33/public/assets/css/slick.css"/>
+    <link type="text/css" rel="stylesheet" href="/project33/public/assets/css/slick-theme.css"/>
 
     <!-- nouislider -->
-    <link type="text/css" rel="stylesheet" href="assets/css/nouislider.min.css"/>
+    <link type="text/css" rel="stylesheet" href="/project33/public/assets/css/nouislider.min.css"/>
 
     <!-- Font Awesome Icon -->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/project33/public/assets/css/font-awesome.min.css">
 
     <!-- Custom stlylesheet -->
-    <link type="text/css" rel="stylesheet" href="assets/css/style.css"/>
+    <link type="text/css" rel="stylesheet" href="/project33/public/assets/css/style.css"/>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -64,7 +66,7 @@
                 <div class="col-md-3" style="margin-right: 200px;">
                     <div class="header-logo">
                         <a href="#" class="logo">
-                            <img src="assets/img/avatar_trangchu.jpg" alt="">
+                            <img src="/project33/public/assets/img/avatar_trangchu.jpg" alt="">
                         </a>
                     </div>
                 </div>
@@ -111,10 +113,10 @@
             <!-- NAV -->
             <ul class="main-nav nav navbar-nav">
                 <li class="active"><a href="#">Trang chủ</a></li>
-                <li><a href="#">Tin tức & sự kiện</a></li>
-                <li><a href="departments.php">Đơn vị</a></li>
-                <li><a href="employees.php">Nhân viên</a></li>
-                <li><a href="#">Thông tin cá nhân</a></li>
+                <li><a href="index.php?controller=current&action=login">Đăng nhập</a></li>
+<!--                <li><a href="../departments.php">Đơn vị</a></li>-->
+<!--                <li><a href="index.php?controller=current&action=employee">Nhân viên</a></li>-->
+<!--                <li><a href="#">Thông tin cá nhân</a></li>-->
             </ul>
             <!-- /NAV -->
         </div>

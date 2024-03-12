@@ -15,7 +15,7 @@ include 'layout/header.php';
             <div class="col-md-5 col-md-push-2">
                 <div id="product-main-img">
                     <div class="product-preview">
-                        <img src="assets/img/avatar_trangchu.jpg" alt="">
+                        <img src="../../public/assets/img/avatar_trangchu.jpg" alt="">
                     </div>
 
                 </div>
@@ -58,11 +58,11 @@ include 'layout/header.php';
                             <p><b>abc@gmail.com</b></p>
                         </div>
                         <div>
-                            <h3>Website:</h3>
+                            <h3>Vị trí:</h3>
                             <p><b>abc@gmail.com</b></p>
                         </div>
                         <div>
-                            <h3>Đơn vị trực thuộc:</h3>
+                            <h3>Đơn vị:</h3>
                             <p><b>abc@gmail.com</b></p>
                         </div>
                     </div>

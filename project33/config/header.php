@@ -28,7 +28,11 @@
                         <a class="nav-link " aria-current="page" href="index.php">Trang chủ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="">Quản lí đơn vị</a>
+                        <?php if (isset($_GET['controller']) && $_GET['controller'] == 'department'): ?>
+                            <a class="nav-link active" href="index.php?controller=department">Quản lí đơn vị</a>
+                        <?php else: ?>
+                            <a class="nav-link" href="index.php?controller=department">Quản lí đơn vị</a>
+                        <?php endif; ?>
                     </li>
                     <li class="nav-item">
                         <?php if (isset($_GET['controller']) && $_GET['controller'] == 'employee'): ?>

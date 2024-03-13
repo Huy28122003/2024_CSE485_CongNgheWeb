@@ -4,6 +4,25 @@ require_once root.'/models/Employee.php';
 
 class EmployeeService
 {
+    public function getEmployeelimit()
+    {
+        $dbConnection = new DBConnection();
+        $conn = $dbConnection->getConnection();
+
+        if($conn != null){
+            $sql = "select * from employees LIMIT 6";
+            $smtm = $conn->query($sql);
+
+            $employees = [];
+            while ($row = $smtm->fetch()){
+                $employee = new Employee($row['employeeID'], $row['fullname'], $row['address'],
+                    $row['email'], $row['mobilePhone'], $row['positionn'], $row['avatar'], $row['departmentID']);
+
+                $employees[] =$employee;
+            }
+            return $employees;
+        }
+    }
     public function getAllEmployee()
     {
         $dbConnection = new DBConnection();

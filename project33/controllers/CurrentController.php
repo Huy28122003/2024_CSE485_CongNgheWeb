@@ -6,6 +6,8 @@ class CurrentController
 {
     public function index()
     {
+        $employeeService = new EmployeeService();
+        $employees = $employeeService->getEmployeelimit();
         include root.'/views/usercurrent/index.php';
     }
     public function employee()

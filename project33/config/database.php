@@ -1,3 +1,4 @@
+
 <?php
 
 define('DB_HOST', 'localhost');
@@ -31,4 +32,5 @@ class DBConnection
     {
         return $this->conn;
     }
+
 }

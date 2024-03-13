@@ -1,3 +1,4 @@
+
 <?php
 
 require_once ('config/config.php');
@@ -28,3 +29,4 @@ if (!method_exists($controller, $action)) {
     exit(1);
 }
 $myController->$action();
+

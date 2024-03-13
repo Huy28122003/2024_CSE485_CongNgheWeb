@@ -31,7 +31,7 @@ include 'layout/header.php';
             <!-- Product details -->
             <div class="col-md-5">
                 <div class="product-details">
-                    <h2 class="product-name">Full Name</h2>
+                    <h2 class="product-name"><?= $employee->getFullname();?></h2>
                     <div>
                         <div class="product-rating">
                             <i class="fa fa-star"></i>
@@ -47,23 +47,23 @@ include 'layout/header.php';
                     <div class="product-options">
                         <div>
                             <h3>Địa chỉ:</h3>
-                            <p><b>175 Tay son</b></p>
+                            <p><b><?= $employee->getAddress();?></b></p>
                         </div>
                         <div>
                             <h3>Email:</h3>
-                            <p><b>abc@gmail.com</b></p>
+                            <p><b><?= $employee->getEmail();?></b></p>
                         </div>
                         <div>
                             <h3>Điện thoại: </h3>
-                            <p><b>abc@gmail.com</b></p>
+                            <p><b><?= $employee->getPhone();?></b></p>
                         </div>
                         <div>
                             <h3>Vị trí:</h3>
-                            <p><b>abc@gmail.com</b></p>
+                            <p><b><?= $employee->getPosition();?></b></p>
                         </div>
                         <div>
                             <h3>Đơn vị:</h3>
-                            <p><b>abc@gmail.com</b></p>
+                            <p><b><?= $employee->getDepartmentID() ?></b></p>
                         </div>
                     </div>
 

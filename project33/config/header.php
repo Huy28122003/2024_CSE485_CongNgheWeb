@@ -1,3 +1,15 @@
+<?php
+if(isset($_GET['msgg']) && isset($_GET['id']) ){
+    $user = $_GET['msgg'];
+    $id = $_GET['id'];
+
+}
+else{
+    $user="";
+}
+
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -28,7 +40,11 @@
                         <a class="nav-link " aria-current="page" href="index.php">Trang chủ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="">Quản lí đơn vị</a>
+                        <?php if (isset($_GET['controller']) && $_GET['controller'] == 'department'): ?>
+                            <a class="nav-link active" href="index.php?controller=department">Quản lí đơn vị</a>
+                        <?php else: ?>
+                            <a class="nav-link" href="index.php?controller=department">Quản lí đơn vị</a>
+                        <?php endif; ?>
                     </li>
                     <li class="nav-item">
                         <?php if (isset($_GET['controller']) && $_GET['controller'] == 'employee'): ?>
@@ -43,8 +59,10 @@
                 </ul>
             </div>
             <div>
-                <a href="" class="text-decoration-none text-success">Tài khoản: <strong>canhdz</strong> </a>
-                <a href="" class="btn btn-danger">Thoát</a>
+                <?php if(!empty($user)): ?>
+                <a href="" class="text-decoration-none text-success">Tài khoản: <strong><?= $user?></strong> </a>
+                <a href="index.php?controller=current" class="btn btn-danger" >Thoát</a>
+                <?php endif; ?>
             </div>
         </div>
     </nav>

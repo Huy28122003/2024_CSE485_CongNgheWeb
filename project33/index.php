@@ -5,6 +5,7 @@ require_once ('config/config.php');
 
 include 'config/database.php';
 
+
 $controller = isset($_GET['controller']) ? $_GET['controller'] : 'current';
 
 if (isset($_GET['action'])) {

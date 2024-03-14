@@ -48,7 +48,6 @@ class EmployeeController
         $employeeService = new EmployeeService();
         $employee = $employeeService->getEmployeeById($id);
 
-
         if ($_SERVER['REQUEST_METHOD'] == "POST"){
             $username = $_POST['username'];
             $add = $_POST['address'];

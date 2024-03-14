@@ -16,6 +16,7 @@ include 'layout/header.php';
                 <div id="product-main-img">
                     <div class="product-preview">
                         <img src="../../public/assets/img/avatar_trangchu.jpg" alt="">
+                        <img src="<?= DOMAIN.$department->getLogo();?>" alt="">
                     </div>
 
                 </div>
@@ -32,6 +33,7 @@ include 'layout/header.php';
             <div class="col-md-5">
                 <div class="product-details">
                     <h2 class="product-name">Full Name</h2>
+                    <h2 class="product-name"><?= $department->getName();?></h2>
                     <div>
                         <div class="product-rating">
                             <i class="fa fa-star"></i>
@@ -42,8 +44,6 @@ include 'layout/header.php';
                         </div>
                         <a class="review-link" href="#">10 Review(s) | Add your review</a>
                     </div>
-
-
                     <div class="product-options">
                         <div>
                             <h3>Địa chỉ:</h3>
@@ -64,10 +64,25 @@ include 'layout/header.php';
                         <div>
                             <h3>Đơn vị trực thuộc:</h3>
                             <p><b>abc@gmail.com</b></p>
+                            <p><b><?= $department->getAddress();?></b></p>
+                        </div>
+                        <div>
+                            <h3>Email:</h3>
+                            <p><b><?= $department->getEmail();?></b></p>
+                        </div>
+                        <div>
+                            <h3>Điện thoại: </h3>
+                            <p><b><?= $department->getPhone();?></b></p>
+                        </div>
+                        <div>
+                            <h3>Website:</h3>
+                            <p><b></b></p><?= $department->getWebsite();?>
+                        </div>
+                        <div>
+                            <h3>Đơn vị trực thuộc:</h3>
+                            <p><b><?= $department->getParentDepartmentId();?></b></p>
                         </div>
                     </div>
-
-
 
                     <ul class="product-links">
                         <li>Share:</li>

@@ -160,9 +160,9 @@ include 'layout/header.php';
                             </div>
                         </li>
                     </ul>
-                    <h2 class="text-uppercase">hot deal this week</h2>
-                    <p>New Collection Up to 50% OFF</p>
-                    <a class="primary-btn cta-btn" href="#">Shop now</a>
+                    <h2 class="text-uppercase">ĐƠN VỊ NỔI BẬT</h2>
+                    <p>Tin tức trong ngày</p>
+                    <a class="primary-btn cta-btn" href="#">Chi tiết</a>
                 </div>
             </div>
         </div>
@@ -171,7 +171,6 @@ include 'layout/header.php';
     <!-- /container -->
 </div>
 <!-- /HOT DEAL SECTION -->
-
 <?php
 include "layout/footer.php";
 ?>

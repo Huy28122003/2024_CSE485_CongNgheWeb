@@ -38,7 +38,8 @@ require_once root.'/config/header.php';
                     <tbody>
                     <?php
                     $departmentService = new DepartmentService();
-                    $departments = $departmentService->getAllDepartment();
+                    $departments = $departmentService->getTenDepartment();
+
                     // echo "<pre>";
                     //  print_r($departments);
                     // echo "</pre>";
@@ -64,11 +65,18 @@ require_once root.'/config/header.php';
                             <td>
                                 <a href="<?= DOMAIN.'index.php?controller=department&action=edit&id='. $department->getId() ?>" class="btn btn-warning"><i class="fa-solid fa-pencil"></i></a>
                             </td>
+
                             <!-- <td>
                                 <form action="<?= DOMAIN.'index.php?controller=department&action=delete&id='. $department->getId() ?>" method="POST" onsubmit="return confirm('Đơn vị này có nhiều nhân viên đang hoạt động bạn không thể xóa!')">
                                     <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
                                 </form>
                             </td> -->
+
+                            <td>
+                                <form action="<?= DOMAIN.'index.php?controller=department&action=delete&id='. $department->getId() ?>" method="POST" onsubmit="return confirm('Đơn vị này có nhiều nhân viên đang hoạt động bạn không thể xóa!')">
+                                    <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                                </form>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                     </tbody>

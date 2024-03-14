@@ -1,0 +1,39 @@
+.title-info{
+    display: flex;
+}
+.label{
+    flex: 1;
+    margin-bottom: 15px;
+}
+.input{
+    flex: 5;
+    margin-bottom: 15px;
+}
+.footter{
+    display: flex;
+}
+.submit{
+    flex: 1;
+
+}
+.move{
+    flex: 5;
+    padding-left: 20px;
+}
+.container{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.58);
+    width: 900px;
+    margin-left: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+h2{
+    border-bottom: 1px solid black;
+}
+.form-layout{
+    border: 5px solid rgba(128, 128, 128, 0.58);
+    margin-left: 250px;
+    margin-right: 150px;
+}
+
+

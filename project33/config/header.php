@@ -1,3 +1,15 @@
+<?php
+if(isset($_GET['msgg']) && isset($_GET['id']) ){
+    $user = $_GET['msgg'];
+    $id = $_GET['id'];
+
+}
+else{
+    $user="";
+}
+
+
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -47,8 +59,10 @@
                 </ul>
             </div>
             <div>
-                <a href="" class="text-decoration-none text-success">Tài khoản: <strong>canhdz</strong> </a>
-                <a href="" class="btn btn-danger">Thoát</a>
+                <?php if(!empty($user)): ?>
+                <a href="" class="text-decoration-none text-success">Tài khoản: <strong><?= $user?></strong> </a>
+                <a href="index.php?controller=current" class="btn btn-danger" >Thoát</a>
+                <?php endif; ?>
             </div>
         </div>
     </nav>

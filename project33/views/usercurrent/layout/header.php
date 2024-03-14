@@ -1,3 +1,4 @@
+
 <?php
 if(isset($_GET['msg']) && isset($_GET['id']) ){
     $user = $_GET['msg'];
@@ -60,7 +61,6 @@ else{
             </ul>
             <ul class="header-links pull-right">
                 <li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
-                <li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
             </ul>
         </div>
     </div>
@@ -76,7 +76,7 @@ else{
                 <div class="col-md-3" style="margin-right: 200px;">
                     <div class="header-logo">
                         <a href="#" class="logo">
-                            <img src="/project33/public/assets/img/avatar_trangchu.jpg" alt="">
+                            <img src="/project33/public/assets/img/logoTLU.jpg" alt="">
                         </a>
                     </div>
                 </div>
@@ -90,16 +90,15 @@ else{
                     <div class="header-search" >
                         <form>
                             <select class="input-select">
-                                <option value="0">All Categories</option>
-                                <option value="1">Category 01</option>
-                                <option value="1">Category 02</option>
+                                <option value="0">Tất cả</option>
+                                <option value="1">Đơn vị</option>
+                                <option value="1">Nhân viên</option>
                             </select>
-                            <input class="input" placeholder="Search here">
-                            <button class="search-btn">Search</button>
+                            <input class="input" placeholder="Tìm kiếm">
+                            <button class="search-btn">Tìm</button>
                         </form>
                     </div>
                     <div style="margin-top: 20px;">
-                        <p style="color: white;">Website tra cứu danh bạ điện tử là một dự án của tổ chức XYZ, nhằm cung cấp một công cụ tiện ích cho cộng đồng. Tổ chức XYZ là một tổ chức phi lợi nhuận, hoạt động trong lĩnh vực giáo dục, văn hóa và xã hội. Tổ chức XYZ được thành lập vào năm 2020, với sứ mệnh là góp phần nâng cao chất lượng cuộc sống của người dân Việt Nam.</p>
                     </div>
                 </div>
                 <!-- /SEARCH BAR -->
@@ -124,14 +123,17 @@ else{
             <ul class="main-nav nav navbar-nav">
                 <li class="active"><a href="#">Trang chủ</a></li>
                 <?php if(!empty($user)): ?>
-                    <li><a href="index.php?controller=employee&action=edit&id=<?= $id?>"><?= $user ?></a></li>
-                    <li><a href="../departments.php">Đơn vị</a></li>
+                    <li><a href=""><?= $user ?></a></li>
+                    <li><a href="index.php?controller=current&action=department&msg=<?= $user ?>&id=<?= $id?>">Đơn vị</a></li>
                     <li><a href="index.php?controller=current&action=employee&msg=<?= $user ?>&id=<?= $id?>">Nhân viên</a></li>
-
+                    <li><a href="index.php?controller=current&action=index">Đăng xuất</a></li>
                 <?php else: ?>
                     <li><a href="index.php?controller=current&action=login">Đăng nhập</a></li>
                 <?php endif; ?>
 
+
+<!--                <li><a href="../departments.php">Đơn vị</a></li>-->
+<!--                <li><a href="index.php?controller=current&action=employee">Nhân viên</a></li>-->
 <!--                <li><a href="#">Thông tin cá nhân</a></li>-->
             </ul>
             <!-- /NAV -->

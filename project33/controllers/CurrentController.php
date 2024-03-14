@@ -1,7 +1,11 @@
 <?php
 
+
 require_once root . '/service/EmployeeService.php';
 require_once root . '/service/UserService.php';
+
+require_once root.'/service/DepartmentService.php';
+
 
 class CurrentController
 {
@@ -9,12 +13,17 @@ class CurrentController
     {
         $employeeService = new EmployeeService();
         $employees = $employeeService->getEmployeelimit();
+
         include root . '/views/usercurrent/index.php';
     }
 
     public function employee()
     {
         include root . '/views/usercurrent/employees.php';
+    }
+    public function department()
+    {
+        include root . '/views/usercurrent/departments.php';
     }
 
     public function login()
@@ -40,7 +49,7 @@ class CurrentController
                     if($user->getRole() == 'admin'){
                         $_SESSION['username'] = $username;
                         $_SESSION['rolee'] = 'admin';
-                        header('Location: index.php?controller=department');
+                        header('Location: index.php?controller=department&msgg='.$user->getName().'&id='.$user->getEmployeeID());
                     }
                     else{
                         $_SESSION['username'] = $username;
@@ -53,21 +62,6 @@ class CurrentController
             else{
                 header('Location: index.php?controller=current&action=login&msg=Đăng nhập thất bại');
             }
-
-
-
-
-//            if (mysqli_num_rows($result) == 'admin') {
-//                $_SESSION['username'] = $username;
-//                $_SESSION['rolee'] = 'admin';
-//                header('Location: index.php?controller=department');
-//            } else if (mysqli_num_rows($result) == 'rengular' ) {
-//                $_SESSION['username'] = $username;
-//                $_SESSION['rolee'] = 'rengular';
-//                header('Location: index.php ');
-//            } else {
-//                echo 'Tên đăng nhập hoặc mật khẩu không đúng.';
-//            }
         }
 
             include root . '/views/usercurrent/login.php';
@@ -81,7 +75,19 @@ class CurrentController
         $employee = $employeeService->getEmployeeById($id);
         if ($employee) {
             include root . '/views/usercurrent/detail_employee.php';
-        } else {
+        } else{
+            echo "ko thấy";
+        }
+    }
+
+    public function detailde()
+    {
+        $id = $_GET['id'];
+        $departmentService = new DepartmentService();
+        $department = $departmentService->getDepartmentById($id);
+        if($department){
+            include root.'/views/usercurrent/detail_department.php';
+        } else{
             echo "ko thấy";
         }
     }

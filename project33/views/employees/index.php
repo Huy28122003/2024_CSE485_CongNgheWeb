@@ -24,7 +24,7 @@ require_once root.'/config/header.php';
                         <th scope="col"> Phòng ban</th>
                         <th scope="col"> Ảnh đại diện</th>
                         <th scope="col"> Mã đơn vị</th>
-                        <th scope="col" colspan="3" class="text-center"> Thao tác</th>
+                        <th scope="col" colspan="3" class="text-center"> Thao tác </th>
                     </tr>
                     </thead>
                     <tbody>
@@ -66,4 +66,4 @@ require_once root.'/config/header.php';
 </main>
 </body>
 </html>
-
+<!--canhpusss-->

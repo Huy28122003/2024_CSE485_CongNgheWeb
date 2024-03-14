@@ -1,7 +1,7 @@
 <?php
 require_once root.'/config/header.php';
 
-// Lấy id của nhân viên từ URL
+// canhpuss
 
 ?>
 

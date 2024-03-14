@@ -1,6 +1,8 @@
 <?php
 include "layout/header.php";
 require_once root.'/service/EmployeeService.php';
+
+
 $employeeService = new EmployeeService();
 $employees = $employeeService->getAllEmployee();
 
@@ -107,3 +109,5 @@ $employees = $employeeService->getAllEmployee();
 <?php
 include "layout/footer.php"
 ?>
+
+<!--canhpussh-->

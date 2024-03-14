@@ -7,8 +7,8 @@ class EmployeeController
 {
     public function index()
     {
-        $employeeService = new EmployeeService();
-        $employees = $employeeService->getAllEmployee();
+        $employeeServices = new EmployeeService();
+        $employees = $employeeServices->getAllEmployee();
 
         include root.'/views/employees/index.php';
     }
@@ -30,9 +30,9 @@ class EmployeeController
             }
 
             $employee = new Employee(null, $username, $add, $email, $phone, $position, $avatar, $de);
-            $employeeService = new EmployeeService();
+            $employeeServices = new EmployeeService();
 
-            $result = $employeeService->addEmployee($employee);
+            $result = $employeeServices->addEmployee($employee);
             if($result){
                 header('Location: index.php?controller=employee&action=index&msg=Đăng kí thành công');
             } else {
@@ -45,8 +45,8 @@ class EmployeeController
     public function edit()
     {
         $id = $_GET['id'];
-        $employeeService = new EmployeeService();
-        $employee = $employeeService->getEmployeeById($id);
+        $employeeServices = new EmployeeService();
+        $employee = $employeeServices->getEmployeeById($id);
 
         if ($_SERVER['REQUEST_METHOD'] == "POST"){
             $username = $_POST['username'];
@@ -65,7 +65,7 @@ class EmployeeController
             $employee->setAvatar($avatar);
             $employee->setDepartmentID($de);
 
-            $result = $employeeService->updateEmployee($employee);
+            $result = $employeeServices->updateEmployee($employee);
             if($result){
                 header('Location: index.php?controller=employee&action=index&msg= Sửa thành công');
             } else {
@@ -78,8 +78,8 @@ class EmployeeController
     public function detail()
     {
         $id = $_GET['id'];
-        $employeeService = new EmployeeService();
-        $employee = $employeeService->getEmployeeById($id);
+        $employeeServices = new EmployeeService();
+        $employee = $employeeServices->getEmployeeById($id);
         if($employee){
             include root.'/views/employees/detail.php';
         } else{
@@ -89,8 +89,8 @@ class EmployeeController
     public function delete()
     {
         $id = $_GET['id'];
-        $employeeService = new EmployeeService();
-        $employee = $employeeService->deleteEmployeeById($id);
+        $employeeServices = new EmployeeService();
+        $employee = $employeeServices->deleteEmployeeById($id);
 
         if($employee){
             header('Location: index.php?controller=employee&action=index&msg= Xóa thành công');

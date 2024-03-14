@@ -11,11 +11,11 @@ class CurrentController
 {
     public function index()
     {
-        $employeeService = new EmployeeService();
-        $employees = $employeeService->getEmployeelimit();
+        $employeeServices = new EmployeeService();
+        $employees = $employeeServices->getEmployeelimit();
 
-        $departmentService = new DepartmentService();
-        $departments = $departmentService->getTenDepartmentlimit();
+        $departmentServices = new DepartmentService();
+        $departments = $departmentServices->getTenDepartmentlimit();
         include root . '/views/usercurrent/index.php';
     }
 
@@ -42,8 +42,8 @@ class CurrentController
 //            $result = mysqli_query($conn, $query);
 
 
-            $userService = new UserService();
-            $user = $userService->getUerByName($username,$passwordd);
+            $userServices = new UserService();
+            $user = $userServices->getUerByName($username,$passwordd);
 
 
             if($user){
@@ -96,9 +96,9 @@ class CurrentController
 
             $result = $employeeService->updateEmployee($employee);
             if($result){
-                header('Location: index.php?controller=current&action=profile&msg='.$tk.'&id='.$id.'&success= Sửa thành công');
+                header('Location: index.php?controller=current&action=profile&msg='.$tk.'&idd='.$id.'&success= Sửa thành công');
             } else {
-                header('Location: index.php?controller=current&action=profile&msg='.$tk.'&id='.$id);
+                header('Location: index.php?controller=current&action=profile&msg='.$tk.'&idd='.$id);
             }
         }
 
@@ -109,8 +109,8 @@ class CurrentController
     public function detail()
     {
         $id = $_GET['id'];
-        $employeeService = new EmployeeService();
-        $employee = $employeeService->getEmployeeById($id);
+        $employeeServices = new EmployeeService();
+        $employee = $employeeServices->getEmployeeById($id);
         if ($employee) {
             include root . '/views/usercurrent/detail_employee.php';
         } else{
@@ -121,8 +121,8 @@ class CurrentController
     public function detailde()
     {
         $id = $_GET['id'];
-        $departmentService = new DepartmentService();
-        $department = $departmentService->getDepartmentById($id);
+        $departmentServices = new DepartmentService();
+        $department = $departmentServices->getDepartmentById($id);
         if($department){
             include root.'/views/usercurrent/detail_department.php';
         } else{

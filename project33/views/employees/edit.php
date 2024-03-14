@@ -7,9 +7,9 @@ require_once root.'/config/header.php';
         <div class="row">
             <div class="col-md">
                 <h2 class="text-center text-primary">Sửa thông tin nhân viên</h2>
-                <?php if (isset($_GET['err'])): ?>
+                <?php if (isset($_GET['errs'])): ?>
                     <div class="alert alert-danger" role="alert">
-                        <?= $_GET['err'] ?>
+                        <?= $_GET['errs'] ?>
                     </div>
                 <?php endif; ?>
                 <form action="index.php?controller=employee&action=edit&id=<?= $employee->getId(); ?>" method="post">

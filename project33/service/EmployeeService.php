@@ -6,8 +6,8 @@ class EmployeeService
 {
     public function getEmployeelimit()
     {
-        $dbConnection = new DBConnection();
-        $conn = $dbConnection->getConnection();
+        $dbConnections = new DBConnection();
+        $conn = $dbConnections->getConnection();
 
         if($conn != null){
             $sql = "select * from employees LIMIT 6";
@@ -25,8 +25,8 @@ class EmployeeService
     }
     public function getAllEmployee()
     {
-        $dbConnection = new DBConnection();
-        $conn = $dbConnection->getConnection();
+        $dbConnections = new DBConnection();
+        $conn = $dbConnections->getConnection();
 
         if($conn != null){
             $sql = "select * from employees";
@@ -45,8 +45,8 @@ class EmployeeService
 
     public function addEmployee($employee)
     {
-        $dbConnection = new DBConnection();
-        $conn = $dbConnection->getConnection();
+        $dbConnections = new DBConnection();
+        $conn = $dbConnections->getConnection();
 
         if($conn != null){
             $sql = "insert into employees (fullname, address, email, mobilePhone, positionn, avatar, departmentID)
@@ -70,8 +70,8 @@ class EmployeeService
 
     public function getEmployeeById($id)
     {
-        $dbConnection = new DBConnection();
-        $conn = $dbConnection->getConnection();
+        $dbConnections = new DBConnection();
+        $conn = $dbConnections->getConnection();
         if ($conn != null){
             $sql = "select * from employees where employeeID=?";
             $stmt = $conn->prepare($sql);
@@ -88,8 +88,8 @@ class EmployeeService
 
     public function updateEmployee($employee)
     {
-        $dbConnection = new DBConnection();
-        $conn = $dbConnection->getConnection();
+        $dbConnections = new DBConnection();
+        $conn = $dbConnections->getConnection();
 
         if($conn != null){
             $sql = "update employees set fullname=?, address=?, email=?, mobilePhone=?, positionn=?, avatar=?, 
@@ -114,8 +114,8 @@ class EmployeeService
 
     public function deleteEmployeeById($id)
     {
-        $dbConnection = new DBConnection();
-        $conn = $dbConnection->getConnection();
+        $dbConnections = new DBConnection();
+        $conn = $dbConnections->getConnection();
 
         if($conn != null){
             $sql = "delete from employees where employeeID=?";

@@ -160,9 +160,9 @@ include 'layout/header.php';
                             </div>
                         </li>
                     </ul>
-                    <h2 class="text-uppercase">hot deal this week</h2>
-                    <p>New Collection Up to 50% OFF</p>
-                    <a class="primary-btn cta-btn" href="#">Shop now</a>
+                    <h2 class="text-uppercase">Đơn vị có nhiều thành tích nhất</h2>
+                    <p>Học lập trình với LARAVEL</p>
+                    <a class="primary-btn cta-btn" href="#">Chi tiết</a>
                 </div>
             </div>
         </div>

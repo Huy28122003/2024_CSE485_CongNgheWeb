@@ -14,6 +14,8 @@ class CurrentController
         $employeeService = new EmployeeService();
         $employees = $employeeService->getEmployeelimit();
 
+        $departmentService = new DepartmentService();
+        $departments = $departmentService->getTenDepartmentlimit();
         include root . '/views/usercurrent/index.php';
     }
 
@@ -49,12 +51,12 @@ class CurrentController
                     if($user->getRole() == 'admin'){
                         $_SESSION['username'] = $username;
                         $_SESSION['rolee'] = 'admin';
-                        header('Location: index.php?controller=department&msgg='.$user->getName().'&id='.$user->getEmployeeID());
+                        header('Location: index.php?controller=department&msgg='.$user->getName().'&idd='.$user->getEmployeeID());
                     }
                     else{
                         $_SESSION['username'] = $username;
                         $_SESSION['rolee'] = 'regular';
-                        header('Location: index.php?msg='.$user->getName().'&id='.$user->getEmployeeID());
+                        header('Location: index.php?msg='.$user->getName().'&idd='.$user->getEmployeeID());
                     }
                 }
 
@@ -66,6 +68,42 @@ class CurrentController
 
             include root . '/views/usercurrent/login.php';
 
+    }
+
+    public function profile()
+    {
+        $tk = $_GET['msg'];
+        $id = $_GET['idd'];
+        $employeeService = new EmployeeService();
+        $employee = $employeeService->getEmployeeById($id);
+
+        if ($_SERVER['REQUEST_METHOD'] == "POST"){
+            $username = $_POST['username'];
+            $add = $_POST['address'];
+            $email = $_POST['email'];
+            $phone = $_POST['phone'];
+            $position = $_POST['position'];
+            $avatar = $_POST['avatar'];
+            $de = $_POST['departmentID'];
+
+            $employee->setFullname($username);
+            $employee->setAddress($add);
+            $employee->setEmail($email);
+            $employee->setPhone($phone);
+            $employee->setPosition($position);
+            $employee->setAvatar($avatar);
+            $employee->setDepartmentID($de);
+
+            $result = $employeeService->updateEmployee($employee);
+            if($result){
+                header('Location: index.php?controller=current&action=profile&msg='.$tk.'&id='.$id.'&success= Sửa thành công');
+            } else {
+                header('Location: index.php?controller=current&action=profile&msg='.$tk.'&id='.$id);
+            }
+        }
+
+
+        include root . '/views/usercurrent/profile.php';
     }
 
     public function detail()

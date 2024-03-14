@@ -1,4 +1,5 @@
 <?php
+
 if(isset($_GET['msgg']) && isset($_GET['id']) ){
     $user = $_GET['msgg'];
     $id = $_GET['id'];
@@ -36,12 +37,10 @@ else{
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link " aria-current="page" href="index.php">Trang chủ</a>
-                    </li>
+
                     <li class="nav-item">
                         <?php if (isset($_GET['controller']) && $_GET['controller'] == 'department'): ?>
-                            <a class="nav-link active" href="index.php?controller=department">Quản lí đơn vị</a>
+                            <a class="nav-link active" href="index.php?controller=department&msgg='<?=$user?>'&id='<?= $id?>">Quản lí đơn vị</a>
                         <?php else: ?>
                             <a class="nav-link" href="index.php?controller=department">Quản lí đơn vị</a>
                         <?php endif; ?>
@@ -60,8 +59,8 @@ else{
             </div>
             <div>
                 <?php if(!empty($user)): ?>
-                <a href="" class="text-decoration-none text-success">Tài khoản: <strong><?= $user?></strong> </a>
-                <a href="index.php?controller=current" class="btn btn-danger" >Thoát</a>
+                    <a href="" class="text-decoration-none text-success">Tài khoản: <strong><?= $user?></strong> </a>
+                    <a href="index.php?controller=current" class="btn btn-danger" >Thoát</a>
                 <?php endif; ?>
             </div>
         </div>

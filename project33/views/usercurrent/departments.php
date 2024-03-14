@@ -59,7 +59,7 @@ $departments = $departSe->getTenDepartment();
                             </div>
                             <div class="product-body">
                                 <p class="product-category">Department</p>
-                                <h3 class="product-name"><a href="index.php?controller=current&action=detailde&id=<?= $department->getId();?>"> <?= $department->getName();?></a></h3>
+                                <h3 class="product-name"><a href="index.php?controller=current&action=detailde&msg=<?= $user ?>&idd=<?= $id?>&id=<?= $department->getId();?>"> <?= $department->getName();?></a></h3>
                                 <h4 class="product-price"><?= $department->getWebsite();?> </h4>
                                 <div class="product-rating">
                                     <i class="fa fa-star"></i>
@@ -71,7 +71,7 @@ $departments = $departSe->getTenDepartment();
                                 
                             </div>
                             <div class="add-to-cart">
-                                <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> <a href="index.php?controller=current&action=detailde&id=<?= $department->getId();?>">Xem chi tiết</a></button>
+                                <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> <a href="index.php?controller=current&action=detailde&msg=<?= $user ?>&idd=<?= $id?>&id=<?= $department->getId();?>">Xem chi tiết</a></button>
                             </div>
                         </div>
                     </div>

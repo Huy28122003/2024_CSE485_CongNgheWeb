@@ -41,7 +41,8 @@ require_once root.'/config/header.php';
                             <td><?= $employee->getEmail(); ?></td>
                             <td><?= $employee->getPhone(); ?></td>
                             <td><?= $employee->getPosition(); ?></td>
-                            <td><?= $employee->getAvatar(); ?></td>
+                            <td><img src="<?php echo DOMAIN.$employee->getAvatar(); ?>" alt="logo" width="30px" height="30px">
+                            </td>
                             <td><?= $employee->getDepartmentID(); ?></td>
                             <td>
                                 <a href="<?= DOMAIN.'index.php?controller=employee&action=detail&id='. $employee->getId() ?>" class="btn btn-primary"><i

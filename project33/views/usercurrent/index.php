@@ -13,47 +13,26 @@ include 'layout/header.php';
                     <h3 class="title">Đơn vị nổi bật</h3>
                 </div>
             </div>
+            <?php
+            $departmentService = new DepartmentService();
+            $departments = $departmentService->getTenDepartmentlimit();
+            ?>
+            <?php foreach ($departments as $department):?>
             <!-- shop -->
             <div class="col-md-4 col-xs-6">
                 <div class="shop">
                     <div class="shop-img">
-                        <img src="./img/shop01.png" alt="">
+                        <img src="<?= DOMAIN.$department->getLogo();?>" alt="">
                     </div>
                     <div class="shop-body">
-                        <h3>Laptop<br>Collection</h3>
-                        <a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
+                        <h3><?= $department->getName();?></h3>
+                        <a href="index.php?controller=current&action=detailde&msg=<?= $user ?>&idd=<?= $id?>&id=<?= $department->getId();?>" class="cta-btn">Chi tiết <i class="fa fa-arrow-circle-right"></i></a>
                     </div>
                 </div>
             </div>
             <!-- /shop -->
+            <?php endforeach;?>
 
-            <!-- shop -->
-            <div class="col-md-4 col-xs-6">
-                <div class="shop">
-                    <div class="shop-img">
-                        <img src="./img/shop03.png" alt="">
-                    </div>
-                    <div class="shop-body">
-                        <h3>Accessories<br>Collection</h3>
-                        <a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- /shop -->
-
-            <!-- shop -->
-            <div class="col-md-4 col-xs-6">
-                <div class="shop">
-                    <div class="shop-img">
-                        <img src="./img/shop02.png" alt="">
-                    </div>
-                    <div class="shop-body">
-                        <h3>Cameras<br>Collection</h3>
-                        <a href="#" class="cta-btn">Shop now <i class="fa fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            <!-- /shop -->
         </div>
         <!-- /row -->
     </div>
@@ -88,13 +67,13 @@ include 'layout/header.php';
                         <div class="col-md-4 col-xs-6" style="margin-top: 35px">
                             <div class="product">
                                 <div class="product-img">
-                                    <img src="./img/product01.png" alt="">
+                                    <img src="<?= DOMAIN.$employee->getAvatar();?>" alt="">
                                     <div class="product-label">
                                     </div>
                                 </div>
                                 <div class="product-body">
                                     <p class="product-category">Employee</p>
-                                    <h3 class="product-name"><a href="index.php?controller=current&action=detail&id=<?= $employee->getId();?>"><?= $employee->getFullname();?></a></h3>
+                                    <h3 class="product-name"><a href="index.php?controller=current&action=detail&msg=<?= $user ?>&idd=<?= $id?>&id=<?= $employee->getId();?>"><?= $employee->getFullname();?></a></h3>
                                     <h4 class="product-price"> <?= $employee->getPosition();?>
 
                                     </h4>
@@ -107,7 +86,7 @@ include 'layout/header.php';
                                     </div>
                                 </div>
                                 <div class="add-to-cart" >
-                                    <button  class="add-to-cart-btn" ><i class="fa fa-shopping-cart" ></i> <a href="index.php?controller=current&action=detail&id=<?= $employee->getId();?>">Xem chi tiết</a>
+                                    <button  class="add-to-cart-btn" ><i class="fa fa-shopping-cart" ></i> <a href="index.php?controller=current&action=detail&msg=<?= $user ?>&idd=<?= $id?>&id=<?= $employee->getId();?>">Xem chi tiết</a>
                                     </button>
                                 </div>
                             </div>

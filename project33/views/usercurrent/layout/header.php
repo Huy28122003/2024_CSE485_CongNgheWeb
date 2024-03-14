@@ -1,8 +1,8 @@
 
 <?php
-if(isset($_GET['msg']) && isset($_GET['id']) ){
+if(isset($_GET['msg']) && isset($_GET['idd']) ){
     $user = $_GET['msg'];
-    $id = $_GET['id'];
+    $id = $_GET['idd'];
 
 }
 else{
@@ -76,7 +76,7 @@ else{
                 <div class="col-md-3" style="margin-right: 200px;">
                     <div class="header-logo">
                         <a href="#" class="logo">
-                            <img src="/project33/public/assets/img/logoTLU.jpg" alt="">
+                            <img src="<?= DOMAIN?>public/assets/img/logoTLU.jpg" alt="">
                         </a>
                     </div>
                 </div>
@@ -121,13 +121,15 @@ else{
         <div id="responsive-nav">
             <!-- NAV -->
             <ul class="main-nav nav navbar-nav">
-                <li class="active"><a href="#">Trang chủ</a></li>
+
                 <?php if(!empty($user)): ?>
-                    <li><a href=""><?= $user ?></a></li>
-                    <li><a href="index.php?controller=current&action=department&msg=<?= $user ?>&id=<?= $id?>">Đơn vị</a></li>
-                    <li><a href="index.php?controller=current&action=employee&msg=<?= $user ?>&id=<?= $id?>">Nhân viên</a></li>
+                    <li class=""><a href="index.php?controller=current&action=index&msg=<?= $user ?>&idd=<?= $id?>">Trang chủ</a></li>
+                    <li><a href="index.php?controller=current&action=profile&msg=<?= $user ?>&idd=<?= $id?>"><?= $user ?></a></li>
+                    <li><a href="index.php?controller=current&action=department&msg=<?= $user ?>&idd=<?= $id?>">Đơn vị</a></li>
+                    <li><a href="index.php?controller=current&action=employee&msg=<?= $user ?>&idd=<?= $id?>">Nhân viên</a></li>
                     <li><a href="index.php?controller=current&action=index">Đăng xuất</a></li>
                 <?php else: ?>
+                    <li class=""><a href="index.php?controller=current&action=index">Trang chủ</a></li>
                     <li><a href="index.php?controller=current&action=login">Đăng nhập</a></li>
                 <?php endif; ?>
 

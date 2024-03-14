@@ -16,6 +16,7 @@ include 'layout/header.php';
                 <div id="product-main-img">
                     <div class="product-preview">
                         <img src="../../public/assets/img/avatar_trangchu.jpg" alt="">
+                        <img src="<?= DOMAIN.$employee->getAvatar();?>" alt="">
                     </div>
 
                 </div>

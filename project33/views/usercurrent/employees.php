@@ -51,13 +51,13 @@ $employees = $employeeService->getAllEmployee();
                             <div class="col-md-4 col-xs-6" style="margin-top: 35px">
                                 <div class="product">
                                     <div class="product-img">
-                                        <img src="./img/product01.png" alt="">
+                                        <img src="<?= DOMAIN.$employee->getAvatar();?>" alt="">
                                         <div class="product-label">
                                         </div>
                                     </div>
                                     <div class="product-body">
                                         <p class="product-category">Employee</p>
-                                        <h3 class="product-name"><a href="index.php?controller=current&action=detail&id=<?= $employee->getId();?>"><?= $employee->getFullname();?></a></h3>
+                                        <h3 class="product-name"><a href="index.php?controller=current&action=detail&msg=<?= $user ?>&idd=<?= $id?>&id=<?= $employee->getId();?>"><?= $employee->getFullname();?></a></h3>
                                         <h4 class="product-price"> <?= $employee->getPosition();?>
 
                                         </h4>
@@ -70,7 +70,7 @@ $employees = $employeeService->getAllEmployee();
                                         </div>
                                     </div>
                                     <div class="add-to-cart" >
-                                        <button  class="add-to-cart-btn" ><i class="fa fa-shopping-cart" ></i> <a href="index.php?controller=current&action=detail&id=<?= $employee->getId();?>">Xem chi tiết</a>
+                                        <button  class="add-to-cart-btn" ><i class="fa fa-shopping-cart" ></i> <a href="index.php?controller=current&action=detail&msg=<?= $user ?>&idd=<?= $id?>&id=<?= $employee->getId();?>">Xem chi tiết</a>
                                         </button>
                                     </div>
                                 </div>
